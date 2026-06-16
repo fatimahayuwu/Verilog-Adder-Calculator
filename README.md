@@ -24,7 +24,8 @@ The design is written in Verilog HDL using a modular approach, consisting of sep
 .
 ├── calculator_top.v      # Top-level module
 ├── bcd_converter.v       # Binary-to-BCD converter
-└── seg_mux.v             # 7-segment multiplexer & decoder
+├── seg_mux.v             # 7-segment multiplexer & decoder
+└── adder-calculator.qsf  # Quartus Settings File (Pin Assignment)
 ```
 
 ## Module Description
@@ -63,4 +64,31 @@ The design is written in Verilog HDL using a modular approach, consisting of sep
 | ------- | ------- | -------------- |
 | 0 – 15  | 0 – 15  | 30             |
 
-This repository contains only the Verilog source files (`.v`) used in the implementation of the project.
+## 📌 Quartus Settings File (.qsf)
+
+This repository includes the `adder-calculator.qsf` file, which contains the Quartus Prime project settings and FPGA pin assignments. By including this file, the required I/O pins can be assigned automatically without manual configuration.
+
+| Signal | Assigned Pin |
+|---------|--------------|
+| `clk` | PIN_23 |
+| `b[0]` | PIN_42 |
+| `b[1]` | PIN_44 |
+| `b[2]` | PIN_49 |
+| `b[3]` | PIN_51 |
+| `a[0]` | PIN_28 |
+| `a[1]` | PIN_31 |
+| `a[2]` | PIN_33 |
+| `a[3]` | PIN_38 |
+| `SEG[0]` | PIN_128 |
+| `SEG[1]` | PIN_121 |
+| `SEG[2]` | PIN_125 |
+| `SEG[3]` | PIN_129 |
+| `SEG[4]` | PIN_132 |
+| `SEG[5]` | PIN_126 |
+| `SEG[6]` | PIN_124 |
+| `DIG[0]` | PIN_133 |
+| `DIG[1]` | PIN_135 |
+| `DIG[2]` | PIN_136 |
+| `DIG[3]` | PIN_137 |
+
+This repository contains only the Verilog source files (`.v`) and the Quartus Settings File (`.qsf`). The Verilog files implement the hardware logic of the project, while the `.qsf` file is included to provide automatic FPGA pin assignment and project configuration in Quartus Prime.
