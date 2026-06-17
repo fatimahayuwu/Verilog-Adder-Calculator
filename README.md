@@ -2,13 +2,13 @@
 
 A simple 4-bit adder calculator implemented in **Verilog HDL** for a **Cyclone IV FPGA** as a Final Semester Project (UAS).
 
-## 📖 Overview
+## Overview
 
 This project implements a simple digital calculator capable of adding two 4-bit binary numbers in real time. The inputs are provided through FPGA slide switches, while the output is displayed as decimal digits on a dual 7-segment display.
 
 The design is written in Verilog HDL using a modular approach, consisting of separate modules for binary addition, binary-to-BCD conversion, and 7-segment display multiplexing.
 
-## ✨ Features
+## Features
 
 * 4-bit binary input (A and B)
 * Real-time addition
@@ -18,7 +18,7 @@ The design is written in Verilog HDL using a modular approach, consisting of sep
 * Multiplexed 7-segment display control
 * Modular Verilog HDL implementation
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 .
@@ -64,7 +64,7 @@ The design is written in Verilog HDL using a modular approach, consisting of sep
 | ------- | ------- | -------------- |
 | 0 – 15  | 0 – 15  | 30             |
 
-## 📌 Quartus Settings File (.qsf)
+## Quartus Settings File (.qsf)
 
 This repository includes the `adder-calculator.qsf` file, which contains the Quartus Prime project settings and FPGA pin assignments. By including this file, the required I/O pins can be assigned automatically without manual configuration.
 
